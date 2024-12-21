@@ -1,0 +1,48 @@
+footer {
+    margin: 130px 0;
+    padding: 0 20px;
+}
+
+h3, p {
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    color: #a88100;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+}
+
+.contato img {
+    margin-right: 5px;
+}
+
+.horario {
+    margin: 100px 0;
+}
+
+@media (min-width: 800px) {
+    footer {
+        margin: 75px 0 60px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .secao {
+        width: 33.3%;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/bebida",
+    "/hamburguer",
+    "/login",
+    "/painel-adm",
+    "/pizza",
+    "/porcao",
+    "/recuperar-senha"
+  ]
+}

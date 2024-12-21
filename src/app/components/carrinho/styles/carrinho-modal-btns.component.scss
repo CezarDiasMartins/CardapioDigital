@@ -1,0 +1,31 @@
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.limpar-modal-btn {
+    background-color: #a88100;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.finalizar-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.finalizar-btn:hover, .limpar-modal-btn:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,131 @@
+<!-- Botão Open Modal -->
+<button class="btnCarrinho" (click)="openModal()">
+  <div class="imgDescricao">
+    <img ngSrc="carrinho.avif" alt="carrinho" height="30" width="30" />
+    <p>Itens({{ totalQuantidade }}) - R$ {{ total }}</p>
+  </div>
+</button>
+
+<!-- Modal -->
+<div class="modalCarrinho" id="modalCarrinho">
+  <div class="fundo" (click)="closeModal()"></div>
+  <div class="bordaCarrinho" (click)="$event.stopPropagation()">
+    <div class="carrinho">
+
+      <div class="header">
+        <div></div>
+        <h2>Carrinho</h2>
+        <div class="closeX">
+          <button (click)="closeModal()">x</button>
+        </div>
+      </div>
+
+      <div class="containerTabela">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Qtd</th>
+              <th>Item</th>
+              <th>Valor Unid</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of carrinhoItems; track $index) {
+              <tr>
+                <td>
+                    <button (click)="decrementoItem(item)">
+                      <img ngSrc="menos.avif" alt="retirar" height="15" width="15">
+                    </button>
+                    {{ item.quantidade }}
+                    <button (click)="incrementoItem(item)">
+                        <img ngSrc="adicao.avif" alt="adicionar" height="15" width="15">
+                    </button>
+                </td>
+                <td>{{ item.titulo }}</td>
+                <td>R$ {{ item.preco.toFixed(2).replace('.', ',') }}</td>
+              </tr>
+            } @empty {
+              <tr class="carrinhoVazio">
+                <td colspan="3">Nenhum item inserido. Carrinho vazio!</td>
+              </tr>
+            }
+
+            <tr class="trTotal">
+              <td>TOTAL({{ totalQuantidade }}):</td>
+              <td>R$ {{ total }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="radios">
+        <div class="radio">
+            <input id="radio1" type="radio" name="radio" value="estabelecimento" [(ngModel)]="opcaoSelecionada"/>
+            <label for="radio1">Estabelecimento</label>
+        </div>
+
+        <div class="radio">
+            <input id="radio2" type="radio" name="radio" value="delivery" [(ngModel)]="opcaoSelecionada"/>
+            <label for="radio2">Delivery</label>
+        </div>
+      </div>
+
+      @if(opcaoSelecionada === 'estabelecimento') {
+        <div class="opcao">
+          <div class="valores">
+            <div class="mesa">
+              <div class="campo">
+                <label>Mesa: </label>
+                <input id="mesa" type="text" (keydown)="somenteNumeros($event)"/>
+              </div>
+              <p class="erro" id="mesaNaoInformada">Digite sua mesa!</p>
+            </div>
+          </div>
+        </div>
+      }
+
+      @if(opcaoSelecionada === 'delivery') {
+        <div class="opcao">
+          <div class="valores">
+            <div class="endereco">
+              <div class="campo">
+                <label>Endereço:</label>
+                <input id="endereco" type="text" placeholder="Digite seu endereço..."/>
+              </div>
+              <p class="erro" id="enderecoNaoInformado">Informe seu endereço completo!</p>
+            </div>
+            
+            <div class="pagamento">
+              <div class="campo">
+                <label>Pagamento:</label>
+                <input id="pagamento" type="text" placeholder="Digite a forma de pagamento..."/>
+              </div>
+              <p class="erro" id="pagamentoNaoInformado">Informe a forma de pagamento!</p>
+            </div>
+  
+            <div class="troco">
+              <div class="campo">
+                <label>Necessita de troco?(Valor):</label>
+                <input id="troco" type="text" placeholder="0,00" (keydown)="somenteNumeros($event)"/>
+              </div>
+            </div>
+            
+            <div class="total">
+              <p>Total: R$ 60,00<span> + Frete</span></p>
+            </div>
+          </div>
+        </div>
+      }
+
+      <div>
+        <div class="btns">
+          <button class="limpar-modal-btn" (click)="limparCarrinho()">Limpar</button>
+          <button class="finalizar-btn" (click)="confirmarPedido()">Confirmar</button>
+        </div>
+        <p class="erro" id="estabelecimentoFechado">Estabelecimento fechado!</p>
+        <p class="erro" id="carrinhoVazio">Carrinho vazio!</p>
+        <p class="erro" id="estabelecimentoDelivery">Informe alguma das opções(estabelecimento ou delivery)!</p>
+      </div>
+    </div>
+  </div>
+</div>

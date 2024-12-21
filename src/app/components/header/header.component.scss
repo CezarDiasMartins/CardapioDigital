@@ -1,0 +1,54 @@
+@keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    padding: 35px 5px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img {
+    animation: rotate 2s ease-in-out forwards;
+}
+
+.user {
+    display: flex;
+    justify-content: end;
+}
+
+.user a {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.img1 {
+    display: none;
+}
+
+.user a:hover {
+    transform: scale(1.1);
+
+    .img {
+        display: none;
+    }
+
+    .img1 {
+        display: block;
+    }
+}
+
+@media (min-width: 700px) {
+    .navbar {
+        padding: 35px 25px;
+    }
+}

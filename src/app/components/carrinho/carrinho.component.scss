@@ -1,0 +1,93 @@
+@import './styles/carrinho-modal-open.component.scss';
+@import './styles/carrinho-modal.component.scss';
+@import './styles/carrinho-modal-header.component.scss';
+@import './styles/carrinho-modal-table-itens.component.scss';
+@import './styles/carrinho-modal-radios.component.scss';
+@import './styles/carrinho-modal-btns.component.scss';
+
+.opcao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valores {
+    text-align: center;
+
+    label {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    input {
+        height: 23px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #a88100;
+    }
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mesa {
+    input {
+        width: 40px;
+    }
+}
+
+.endereco {
+    input {
+        width: 160px;
+    }
+}
+
+.pagamento {
+    input {
+        width: 225px;
+    }
+}
+
+.troco {
+    input {
+        width: 60px;
+    }
+}
+
+.erro {
+    display: none;
+    color: red;
+    text-align: center;
+    margin: 10px 0 -5px 0;
+}
+
+.total {
+    font-size: 20px;
+
+    span {
+        color: #a88100;
+    }
+}
+
+.mesa, .endereco, .pagamento, .troco, .total {
+    margin-bottom: 20px
+}
+
+.carrinhoVazio {
+    color: red;
+    margin: 50px 0;
+    height: 40px;
+}
+
+@media (min-width: 400px) {
+    .campo {
+        flex-direction: row;
+    }
+}

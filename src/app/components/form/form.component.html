@@ -1,0 +1,13 @@
+<section>
+   <h1>{{ titulo }}</h1>
+   <div class="form">
+       <ng-content></ng-content>
+        <button 
+            class="btnPrimary" 
+            (click)="submit()"
+            [disabled]="disablePrimaryBtn">
+            {{ primaryBtnText }}
+        </button>
+        <a class="btnVoltar" type="button" href="{{ voltarBtnHref }}">Voltar</a>
+   </div>
+</section>

@@ -1,0 +1,25 @@
+.btnVoltar {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 40px;
+}
+
+.btnVoltar a {
+    text-decoration: none;
+    border: 1px solid #a88100;
+    border-radius: 10px;
+    color: white;
+    background-color: #a88100;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.btnVoltar a:hover {
+    color: #a88100;
+    background-color: black;
+    transform: scale(1.1);
+}

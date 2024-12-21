@@ -1,0 +1,17 @@
+.carrosel {
+    margin-top: 30px;
+}
+
+.carroselImg{
+    height: auto;
+    width: 100%;
+}
+
+@media (min-width: 520px) {
+    .carrosel{
+        width: 500px;
+        margin: 30px auto 0 auto;
+    }
+
+    .carroselImg{ border-radius: 10px; }
+}

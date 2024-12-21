@@ -1,0 +1,12 @@
+<h1>{{ titulo }}</h1>
+<div class="cards">
+    @for (item of produtos; track $index) {
+        <app-card
+            [img]="item.img"
+            [titulo]="item.titulo"
+            [descricao]="item.descricao"
+            [preco]="item.preco"
+            (addAoCarrinhoEvent)="adicionarProdutoNoCarrinho($event)">
+        </app-card>
+    }
+</div>

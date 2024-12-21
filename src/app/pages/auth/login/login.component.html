@@ -1,0 +1,27 @@
+<app-form
+    titulo="Login Administrador"
+    primaryBtnText="Entrar"
+    voltarBtnHref=""
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginForm.valid">
+
+    <form [formGroup]="loginForm">
+        <app-input
+            type="email"
+            placeholder="email@adm"
+            formControlName="email"
+            label="Email"
+            inputName="email">
+        </app-input>
+        
+        <app-input
+            type="password"
+            formControlName="password"
+            inputName="password"
+            label="Senha">
+        </app-input>
+        
+        <a class="recuperar-senha" type="text" href="/recuperar-senha">Recuperar senha?</a>
+    </form>
+</app-form>

@@ -1,0 +1,70 @@
+.cardapio {
+    margin-top: 90px;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #a88100;
+    margin-bottom: 50px;
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.secoes {
+    display: grid;
+    grid-template-columns: 12fr;
+}
+
+.secao {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img1 {
+    display: none;
+}
+
+.secao :hover {
+    color: #a88100;
+    transform: scale(1.05);
+
+    .img {
+        display: none;
+    }
+
+    .img1 {
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+a, img h3 {
+    text-align: center;
+}
+
+@media (max-width: 270px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 480px) {
+    .secoes {
+        grid-template-columns: 6fr 6fr;
+    }
+}

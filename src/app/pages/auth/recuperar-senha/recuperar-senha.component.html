@@ -1,0 +1,18 @@
+<app-form
+    titulo="Recuperar Senha"
+    primaryBtnText="Entrar"
+    voltarBtnHref="/login"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!recuperarSenhaForm.valid">
+
+    <form [formGroup]="recuperarSenhaForm">
+        <app-input
+            type="email"
+            placeholder="email@adm"
+            formControlName="email"
+            label="Email"
+            inputName="email">
+        </app-input>
+    </form>
+</app-form>

@@ -1,0 +1,40 @@
+.containerTabela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 35px 0;
+}
+
+.tabela {
+    text-align: center;
+    width: 100%;
+}
+
+tr{
+    height: 50px;
+}
+
+td button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+td button:hover {
+    transform: scale(1.2);
+}
+
+.trTotal {
+    color: #a88100;
+}
+
+@media (min-width: 350px) {
+    .tabela {
+        width: 90%;
+    }
+
+    th, td {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,40 @@
+.header {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #a88100;
+    font-size: 35px;
+}
+
+.closeX {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    
+    button {
+        cursor: pointer;
+        color: red;
+        border: 2px solid red;
+        display: inline;
+        padding: 3px 10px;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        position: fixed;
+        background-color: black;
+    }
+
+    button:hover {
+        color: white;
+        background-color: red;
+    }
+}
+
+@media (min-width: 350px) {
+    h2 {
+        font-size: 45px;
+    }
+}

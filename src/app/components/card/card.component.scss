@@ -1,0 +1,83 @@
+.card {
+    border-color: #a88100;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 13px;
+    margin-bottom: 20px;
+    min-width: 160px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.example-card {
+    border-radius: 13px;
+    border: 1px solid #a88100;
+    background-color: transparent;
+}
+
+.titulo, .preco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a88100;
+}
+
+.titulo {
+    font-size: 25px;
+}
+
+.descricao {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.preco {
+    font-size: 20px;
+}
+
+.titulo, .descricao, .preco{
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btnCarrinho {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 15px auto 0 auto;
+    border: 1px solid #a88100;
+    border-radius: 10px;
+    background-color: #a88100;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btnCarrinho:hover {
+    background-color: black;
+    transform: scale(1.01);
+}
+
+@media (min-width: 330px) {
+    .titulo {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .descricao {
+        font-size: 20px;
+    }
+
+    .preco {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 700px) {
+    .card {
+        margin: 15px 0;
+    }
+}
